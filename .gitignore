@@ -1,2 +1,7 @@
 .idea/
 venv/
+db.sqlite3
+identifier.sqlite
+taskmanagement/__pycache__/
+users/__pycache__/
+users/migrations/__pycache__/
