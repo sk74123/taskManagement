@@ -4,6 +4,6 @@ db.sqlite3
 identifier.sqlite
 taskmanagement/__pycache__/
 users/__pycache__/
-users/migrations/__pycache__/
-tasks/migrations/__pycache__/
+users/migrations/
+tasks/migrations/
 tasks/__pycache__/
