@@ -5,3 +5,5 @@ identifier.sqlite
 taskmanagement/__pycache__/
 users/__pycache__/
 users/migrations/__pycache__/
+tasks/migrations/__pycache__/
+tasks/__pycache__/
