@@ -9,6 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'username', 'email', 'password', 'first_name', 'last_name', 'city', 'country')
 
     def validate(self, data):
+        print("Hello")
         # Check for unique username
         if CustomUser.objects.filter(username=data.get('username')).exists():
             raise serializers.ValidationError({'username': 'A user with this username already exists.'})
