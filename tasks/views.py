@@ -1,12 +1,13 @@
-from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from .models import Task
+from rest_framework import status
 from .serializers import TaskSerializer
 
-
 @api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def create_task(request):
+    print(request.user)
     user = request.user  # Get the logged-in user
     data = request.data.copy()
     data['created_by'] = user.id  # Set the created_by field to the logged-in user
